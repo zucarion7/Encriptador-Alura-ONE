@@ -1,25 +1,51 @@
 header{
-    padding:5% 20% 10% 20%;
+    padding:5% 5% 5% 20%;
     font-size: 100px;
     font-weight: bold;    
     color:blue;
     background-color: black;    
 }
 
-main{
-    padding:10% 20% 10% 20%;
-    background:rgb(201, 199, 199);
-}
-
-/* input{
-    padding:10% 20% 10% 20%;
-    border: 20px;
-    text-align: top;
-    text-align: left;
+/* body{
+    overflow:hidden;
 } */
 
+main{
+    padding:10% 20% 10% 20%;
+    background:rgb(201, 199, 199);    
+}
+
+input{
+    margin-top: 5px;
+    padding: 2% 2% 10% 2%;
+    font-size: 37px;
+    border: none;
+    /* text-align: top; */
+    text-align: left;
+}
+
+button{
+    width: 155px;
+    height: 50px;
+    font-size: 20px;
+}
 
 footer{
-    padding:10% 20% 10% 20%;
+    padding:1% 20% 1% 20%;
     background-color: black;
+}
+
+.box{
+    border-radius: 5px;
+    border-color: blueviolet;
+    border: 5px 5px;
+}
+
+.redes-S{
+    width: 75px;
+    height: 75px;
+}
+
+.redes:hover{
+    border-color: blueviolet;
 }
