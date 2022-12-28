@@ -1,7 +1,5 @@
 function validar(frase,encript){
-    if(validarEmpty(frase)){
-        alert("No se encontró ningun mensaje");
-    }else{
+    if(validarEmpty(frase)){            
         for(let i=0;i<frase.length;i++){
             if(!((frase.charCodeAt(i)>96 && frase.charCodeAt(i)<123) || (frase.charCodeAt(i)>47 && frase.charCodeAt(i)<58))){
                 alert(`Se ingreso letra mayuscula, tilde o caracter especial. \n\nNo se puede ${encript}`)
@@ -9,12 +7,14 @@ function validar(frase,encript){
             }
         };    
         return true;
+    }else{
+        alert("No se encontró ningun mensaje");
     }
 }
 
 function validarEmpty(frase){
-    let vacio=frase=="" ? true:false;
-    return vacio;
+    let ocupado=frase!="" ? true:false;
+    return ocupado;
 }
 
 function encriptar(frase){
