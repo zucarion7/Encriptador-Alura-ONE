@@ -36,16 +36,24 @@ function desEncriptar(frase){
 }
 
 let dato=document.querySelector("[name=texto]");
-
+const copiar=document.querySelector("[name=copiar]");
+const limpiar_texto=document.querySelector("[name=limpiar_texto");
+const limpiar_mensaje=document.querySelector("[name=limpiar_mensaje");
 const encriptador=document.querySelector("[name=encriptar]");
+const desEncriptador=document.querySelector("[name=desEncriptar]");
+let output=document.querySelector("output");
+
 encriptador.addEventListener("click",()=>{
         if(validar(dato.value,"encriptar")==true) alert(encriptar(dato.value))
 });
 
-const desEncriptador=document.querySelector("[name=desEncriptar]");
 desEncriptador.addEventListener("click",()=>{
         if(validar(dato.value,"des-encriptar")==true) alert(desEncriptar(dato.value))
 });
+
+copiar.addEventListener("click",()=>alert("test"));
+// limpiar_texto.addEventListener("click",()=>alert("hola"));
+limpiar_mensaje.addEventListener("click",()=>alert("test3"));
 
 
 

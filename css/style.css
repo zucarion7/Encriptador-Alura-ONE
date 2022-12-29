@@ -1,22 +1,30 @@
 header{
-    padding:5% 5% 5% 20%;
-    font-size: 100px;
+    /* padding:3rem 5% 2% 20%; */
+    font-size: 75px;
+    font-size: 4rem;
     font-weight: bold;    
     color:blue;
-    background-color: black;    
+    /* background-color: black;     */
 }
 
-/* body{
-    overflow:hidden;
-} */
+.alura-img{
+    margin: 0.5rem;
+    width: 175px;
+}
+
+body{
+    /* overflow:hidden; */
+    background-color: black;
+}
 
 main{
-    padding:10% 20% 10% 20%;
-    background:rgb(201, 199, 199);    
+    padding:5% 20% 5% 10%;
+    /* background:rgb(201, 199, 199);     */
 }
 
 input{
-    margin-top: 5px;
+    display: block;
+    /* margin-top: 5px; */
     padding: 2% 2% 10% 2%;
     font-size: 37px;
     border: none;
@@ -25,27 +33,52 @@ input{
 }
 
 button{
+    display:inline-block;
+    font-weight: bold;
+    border-radius: 7px;
+    background: grey;
     width: 155px;
     height: 50px;
     font-size: 20px;
+    transition:0.5s;
 }
 
-footer{
+button:hover{
+    background:blue;
+    box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;
+}
+
+button:active {
+    /* transform: scale(0.98); */
+    width: 150px;
+    height: 45px;
+    box-shadow: 3px 2px 22px 1px red;
+    transition: 0s;
+}
+
+/* footer{
     padding:1% 20% 1% 20%;
-    background-color: black;
-}
+} */
 
-.box{
-    border-radius: 5px;
-    border-color: blueviolet;
-    border: 5px 5px;
+.redes{
+    display: inline-block;
+    align-content: center;   
 }
 
 .redes-S{
-    width: 75px;
-    height: 75px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;    
 }
 
-.redes:hover{
-    border-color: blueviolet;
+.redes-S:hover{
+    /* margin: 5px; */
+    background-color: blue;
+    box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;
+    border:5px 5px;    
+}
+
+.zuca7{
+    color:blue;
 }

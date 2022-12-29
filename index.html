@@ -7,33 +7,55 @@
         <title>Encriptador</title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/icono encriptador.ico">
     </head>    
 
     <body>
         <header>
             <div>
-                <img src="img/A-alura.png">
+                <img class="alura-img" src="img/A-alura.png">
             </div>
             <div>
                 <h1>Encriptador</h1>
             </div>            
         </header>
-
+        
         <main>
-            <input name="texto">
-            <button type="button" name="encriptar">Encriptar</button>
-            <button type="button" name="desEncriptar">Des-Encriptar</button>           
+            <section>
+                <input name="texto">
+                <button type="button" name="encriptar">Encriptar</button>
+                <button type="button" name="desEncriptar">Des-Encriptar</button>
+                <button type="button" name="limpiar_texto">Limpiar</button>
+            </section>
+            <aside>
+                <output></output>
+                <button type="button" name="copiar">Copiar</button>
+                <button type="button" name="limpiar_mensaje">Limpiar</button>
+            </aside>
 
-            <script src="js/index.js"></script>
+            
 
         </main>
         
 
         <footer>
-            <div class="box">
-                <img class="redes-S" src="img/github.png">
-                <img class="redes-S" src="img/linkedin v2.png">
-            </div>            
+            <section class="redes">
+                <ul>            
+                    <a href="https://github.com/zucarion7" target="_BLANK">
+                        <img class="redes-S" src="img/github.png" alt="gitHub">
+                    </a>
+
+                    <a href="https://www.instagram.com/zucarion7/ " target="_BLANK">
+                        <img class="redes-S" src="img/instagram.png" alt="instagram">
+                        </a>
+
+                    <a href="https://www.linkedin.com/in/zucarion7" target="_BLANK">
+                        <img class="redes-S" src="img/linkedin v2.png" alt="Linkedin" >
+                    </a>                   
+                </ul>
+            </section>
+            <p class="zuca7">zucarion7</p>   
         </footer>
+        <script src="js/index.js"></script>        
     </body>    
 </html>
