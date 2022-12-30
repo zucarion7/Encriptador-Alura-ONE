@@ -1,10 +1,15 @@
 header{
-    /* padding:3rem 5% 2% 20%; */
+    display: flex;
     font-size: 75px;
     font-size: 4rem;
     font-weight: bold;    
-    color:blue;
+    color:rgb(5, 1, 221);
+    margin:5px;
     /* background-color: black;     */
+}
+
+h1{
+    padding: 50px 100px 0 100px;
 }
 
 .alura-img{
@@ -17,26 +22,57 @@ body{
     background-color: black;
 }
 
-main{
+/* main{
     padding:5% 20% 5% 10%;
-    /* background:rgb(201, 199, 199);     */
+} */
+
+.zona-encript{
+    display:flex;
+    border: 2px solid white;
+    border-radius:5px;
+    margin:5px;    
 }
 
-input{
-    display: block;
-    /* margin-top: 5px; */
-    padding: 2% 2% 10% 2%;
-    font-size: 37px;
-    border: none;
-    /* text-align: top; */
-    text-align: left;
+.zona-texto{
+    width: 600px;
+    display: inline-block;
+    margin:5px;
+    border-radius: 5px;
+    border:2px solid white;
 }
+
+.zona-mensaje{
+    width: 400px;
+    border: 2px solid white;
+    border-radius:5px;
+    margin:5px;
+}
+
+textarea{
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 37px;
+    padding: 2% 2% 2% 2%;
+    resize:none;
+    margin:7%;
+    width:84%;
+    border: none;
+}
+
+/* .texto{
+    border: none;
+} */
+
+/* .mensaje{
+} */
+
+
 
 button{
     display:inline-block;
     font-weight: bold;
     border-radius: 7px;
-    background: grey;
+    background: purple;
     width: 155px;
     height: 50px;
     font-size: 20px;
@@ -56,29 +92,48 @@ button:active {
     transition: 0s;
 }
 
-/* footer{
-    padding:1% 20% 1% 20%;
-} */
-
-.redes{
-    display: inline-block;
-    align-content: center;   
+footer{
+    display: flex;
+    align-content: center;
+    padding:0 0 2% 40%;
 }
 
-.redes-S{
+/* .redes{
     display: inline-block;
+    align-content: center;   
+} */
+
+li{
+    display: inline;
+    text-align: center;
+    
+}
+
+.redes-S{    
     width: 50px;
     height: 50px;
-    border-radius: 100%;    
+    border-radius: 100%;
+    display:inline-block;    
 }
 
 .redes-S:hover{
     /* margin: 5px; */
     background-color: blue;
-    box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;
-    border:5px 5px;    
+    box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;    
+}
+.redes-S:active {
+    /* transform: scale(0.98); */
+    width: 45px;
+    height: 45px;
+    box-shadow: 3px 2px 22px 3px red;
+    transition: 0s;
 }
 
 .zuca7{
-    color:blue;
+    display: inline;
+    color:rgb(5, 1, 221);
+    font-size: 17px;
+    text-align: center;
+    margin-top: 2rem;
 }
+/* #161F5F */
