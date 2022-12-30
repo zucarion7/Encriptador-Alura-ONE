@@ -1,3 +1,6 @@
+var listaEncrip=['enter','imes','ai','ober','ufat'],
+    listaDesEnc=['e','i','a','o','u'];
+
 function validar(frase,encript){
     if(validarEmpty(frase)){            
         for(let i=0;i<frase.length;i++){
@@ -17,22 +20,11 @@ function validarEmpty(frase){
     return ocupado;
 }
 
-function encriptar(frase){
-    frase=frase.replaceAll('e','enter');    
-    frase=frase.replaceAll('i','imes');
-    frase=frase.replaceAll('a','ai');        
-    frase=frase.replaceAll('o','ober');
-    frase=frase.replaceAll('u','ufat');    
+function cambio(frase,lista1,lista2){
+    for(let i=0;i<lista1.length;i++){
+        frase=frase.replaceAll(lista1[i],lista2[i]);
+    }
     return(frase);
-}
-
-function desEncriptar(frase){
-    frase=frase.replaceAll('enter','e');
-    frase=frase.replaceAll('imes','i');
-    frase=frase.replaceAll('ai','a');        
-    frase=frase.replaceAll('ober','o');
-    frase=frase.replaceAll('ufat','u');
-    return frase;
 }
 
 function copiarPortaPapeles(elemento){
@@ -44,7 +36,6 @@ function pegarPortaPapeles(elemento){
     elemento.select(); 
     navigator.clipboard.readText()
         .then((value)=>elemento.value=value);
-    // alert(elemento.value);
 }
 
 let texto=document.querySelector("[name=texto]");
@@ -56,11 +47,11 @@ const copiar=document.querySelector("[name=copiar]");
 const limpiar_mensaje=document.querySelector("[name=limpiar_mensaje");
 
 encriptador.addEventListener("click",()=>{
-        if(validar(texto.value,"encriptar")==true) mensaje.value=encriptar(texto.value);
+        if(validar(texto.value,"encriptar")==true) mensaje.value=cambio(texto.value,listaDesEnc,listaEncrip);
 });
 
 desEncriptador.addEventListener("click",()=>{
-        if(validar(texto.value,"des-encriptar")==true) mensaje.value=desEncriptar(texto.value);
+        if(validar(texto.value,"des-encriptar")==true) mensaje.value=cambio(texto.value,listaEncrip,listaDesEnc);
 });
 
 limpiar_texto.addEventListener("click",()=>texto.value="");

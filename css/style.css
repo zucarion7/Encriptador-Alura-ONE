@@ -42,6 +42,7 @@ body{
 }
 
 .zona-mensaje{
+    /* display: flex; */
     width: 400px;
     border: 2px solid white;
     border-radius:5px;
@@ -98,10 +99,11 @@ footer{
     padding:0 0 2% 40%;
 }
 
-/* .redes{
-    display: inline-block;
-    align-content: center;   
-} */
+.redes{
+    border:2px solid white;
+    /* display: inline-block; */
+    /* align-content: center;    */
+}
 
 li{
     display: inline;
@@ -113,7 +115,7 @@ li{
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    display:inline-block;    
+    /* display:inline-block;     */
 }
 
 .redes-S:hover{
