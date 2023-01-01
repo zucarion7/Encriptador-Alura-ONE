@@ -13,7 +13,7 @@
     <body>
         <header>
             <div>
-                <img class="alura-img" src="img/A-alura.png">
+                <img id="alura-A" src="img/A-alura.png">
             </div>
             <div>
                 <h1>Encriptador</h1>
@@ -21,20 +21,19 @@
         </header>
         
         <main>
-            <section class="zona-encript">
-                <div class="zona-texto">
-                    <textarea class="texto" name="texto"></textarea>
-                    <button type="button" name="encriptar">Encriptar</button>
-                    <button type="button" name="desEncriptar">Des-Encriptar</button>
-                    <button type="button" name="limpiar_texto">Limpiar</button>
-                </div>
+            <div class="zona-texto">
+                <textarea id="texto" name="texto" placeholder="Ingrese el texto aquí"></textarea>
+                <button type="button" name="encriptar">Encriptar</button>
+                <button type="button" name="desEncriptar">Des-Encriptar</button>
+                <button type="button" name="limpiar_texto">Limpiar</button>
+            </div>
 
-                <section class="zona-mensaje">
-                    <textarea class="mensaje" name="mensaje" readonly></textarea>
-                    <button type="button" name="copiar">Copiar</button>
-                    <button type="button" name="limpiar_mensaje">Limpiar</button>
-                </section>
-            </section>            
+            <section class="zona-mensaje">
+                <textarea id="mensaje" name="mensaje" readonly></textarea>
+                <img id="alura-img" src="img/Alura.png">
+                <button type="button" name="copiar">Copiar</button>
+                <button type="button" name="limpiar_mensaje">Limpiar</button>
+            </section>
         </main>       
 
         <footer>
@@ -59,7 +58,7 @@
                     </li>
                 </ul>
             </section>
-            <p class="zuca7">zucarion7</p>   
+            <p class="zuca7">@zucarion7</p>   
         </footer>
         <script src="js/index.js"></script>        
     </body>    

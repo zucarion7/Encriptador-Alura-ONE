@@ -1,4 +1,4 @@
-var listaEncrip=['enter','imes','ai','ober','ufat'],
+const listaEncrip=['enter','imes','ai','ober','ufat'],
     listaDesEnc=['e','i','a','o','u'];
 
 function validar(frase,encript){
@@ -32,11 +32,11 @@ function copiarPortaPapeles(elemento){
     navigator.clipboard.writeText(textoACopiar);
 }
 
-function pegarPortaPapeles(elemento){   
-    elemento.select(); 
-    navigator.clipboard.readText()
-        .then((value)=>elemento.value=value);
-}
+// function pegarPortaPapeles(elemento){   
+//     elemento.select(); 
+//     navigator.clipboard.readText()
+//         .then((value)=>elemento.value=value);
+// }
 
 let texto=document.querySelector("[name=texto]");
 const encriptador=document.querySelector("[name=encriptar]");
@@ -58,25 +58,7 @@ limpiar_texto.addEventListener("click",()=>texto.value="");
 
 copiar.addEventListener("click",()=>{
     copiarPortaPapeles(mensaje);
-    pegarPortaPapeles(texto);    
+    // pegarPortaPapeles(texto);    
 });
 
 limpiar_mensaje.addEventListener("click",()=>mensaje.value="");
-
-
-
-
-
-
-
-// const encriptador=document.querySelector("[name=encriptar]");
-// encriptador.addEventListener("click",()=>alert(encriptar(dato.value))); //encriptar sin importar validacion
-
-
-
-// let body=document.querySelector("body");
-// body.addEventListener("click",(event)=>{
-//     if(event.target.name=="encriptar"){alert(encriptar(dato.value))}
-//     if(event.target.name=="desEncriptar"){alert(desEncriptar(dato.value))}
-// })
-

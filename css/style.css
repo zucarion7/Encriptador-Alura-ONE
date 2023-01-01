@@ -1,52 +1,48 @@
 header{
-    display: flex;
-    font-size: 75px;
     font-size: 4rem;
     font-weight: bold;    
     color:rgb(5, 1, 221);
-    margin:5px;
-    /* background-color: black;     */
+    margin:15px;
 }
 
 h1{
-    padding: 50px 100px 0 100px;
+    padding: 50px 100px 0 225px;
 }
 
-.alura-img{
-    margin: 0.5rem;
+#alura-A{
+    float: left;
     width: 175px;
 }
 
 body{
-    /* overflow:hidden; */
     background-color: black;
 }
 
-/* main{
-    padding:5% 20% 5% 10%;
-} */
-
-.zona-encript{
-    display:flex;
-    border: 2px solid white;
-    border-radius:5px;
-    margin:5px;    
+main{
+    margin:25px;
 }
 
 .zona-texto{
-    width: 600px;
+    width: 55%;
+    height: 450px;  /* 500px */
     display: inline-block;
-    margin:5px;
-    border-radius: 5px;
-    border:2px solid white;
+    margin:30px;
+    border-radius: 10px;
+    border:2px solid red;
 }
 
 .zona-mensaje{
-    /* display: flex; */
-    width: 400px;
-    border: 2px solid white;
-    border-radius:5px;
-    margin:5px;
+    position:absolute;
+    width: 370px;
+    height: 620px;
+    background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red;
+    border: 2px solid red;
+    border-radius:10px;
+    /* margin:5px auto; */
+    top: 50px;
+    left:60%;
+    /* right: 0; */
+    margin:20px 10% 0 0;
 }
 
 textarea{
@@ -55,73 +51,87 @@ textarea{
     font-size: 37px;
     padding: 2% 2% 2% 2%;
     resize:none;
-    margin:7%;
     width:84%;
     border: none;
+    color: green;
 }
 
-/* .texto{
-    border: none;
-} */
+textarea::placeholder{
+    color: rgb(7, 173, 7);
+}
 
-/* .mensaje{
-} */
+#mensaje{
+    height: 75%;
+    margin:20px 20px 20px 6%;
+}
 
+#texto{
+    height: 65%;
+    margin:20px 20px 20px 6%;
+}
 
+#alura-img{
+    width: 84%;
+    margin:7% 7% 7% 6%;
+    display:none;
+}
 
 button{
     display:inline-block;
+    /* position:relative; */    
     font-weight: bold;
     border-radius: 7px;
-    background: purple;
+    border:3px solid;
+    border-color: #161F5F;
+    background: none;
+    margin: 10px;
     width: 155px;
     height: 50px;
     font-size: 20px;
-    transition:0.5s;
+    /* color: green; */
+    color: blue;
 }
 
 button:hover{
-    background:blue;
+    animation-name:boton-color;
+    animation-duration: 1.5s;
     box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;
 }
 
 button:active {
-    /* transform: scale(0.98); */
     width: 150px;
     height: 45px;
     box-shadow: 3px 2px 22px 1px red;
-    transition: 0s;
+    /* transition: 0s; */
 }
 
 footer{
-    display: flex;
-    align-content: center;
-    padding:0 0 2% 40%;
+    text-align: center;
+    bottom:0;
+    margin-bottom: 10px;
 }
 
 .redes{
-    border:2px solid white;
-    /* display: inline-block; */
-    /* align-content: center;    */
+    display: inline-block;
+    border:2px solid blue;
+    border-radius: 5px;
 }
 
 li{
-    display: inline;
-    text-align: center;
-    
+    display: inline-block;
+    text-align: center;   
 }
 
 .redes-S{    
     width: 50px;
     height: 50px;
-    border-radius: 100%;
-    /* display:inline-block;     */
+    border-radius: 5px;
 }
 
 .redes-S:hover{
     /* margin: 5px; */
     background-color: blue;
-    box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;    
+    box-shadow: 0 0 15px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;    
 }
 .redes-S:active {
     /* transform: scale(0.98); */
@@ -132,10 +142,64 @@ li{
 }
 
 .zuca7{
-    display: inline;
+    display: block;
     color:rgb(5, 1, 221);
     font-size: 17px;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 15px;
 }
 /* #161F5F */
+
+@media screen and (max-width:950px){
+    h1{
+        font-size: 3rem;
+        padding: 50px 100px 0 12%;
+    }
+    
+    .zona-texto{
+        width: 90%;
+        height: 500px;
+        margin:5%;
+        /* display: block; */
+        /* margin:30px; */
+        border-radius: 10px;
+        border:2px solid red;
+    }
+    
+    .zona-mensaje{
+        position:static;
+        width: 90%;
+        height: 620px;
+        background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red;
+        border: 2px solid red;
+        border-radius:10px;
+        margin:5%;
+        top: 50px;
+        left:5%;
+    }
+
+    
+    
+    /* textarea{
+        display: inline-block;
+        border-radius: 5px;
+        font-size: 37px;
+        padding: 2% 2% 2% 2%;
+        resize:none;
+        margin:7% 7% 7% 6%;
+        width:84%;
+        height: 200px;
+        border: none;
+    } */
+}
+
+@keyframes boton-color {
+    25%{
+        background: blue;
+        color: black;
+    }
+    90%{
+        background: none;
+        color: blue;
+    }
+}
