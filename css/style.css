@@ -24,7 +24,7 @@ main{
 
 .zona-texto{
     width: 55%;
-    height: 450px;  /* 500px */
+    height: 450px;
     display: inline-block;
     margin:30px;
     border-radius: 10px;
@@ -35,61 +35,102 @@ main{
     position:absolute;
     width: 370px;
     height: 620px;
-    background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red;
+    /* background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red; */
     border: 2px solid red;
     border-radius:10px;
-    /* margin:5px auto; */
     top: 50px;
     left:60%;
-    /* right: 0; */
     margin:20px 10% 0 0;
 }
 
 textarea{
     display: inline-block;
     border-radius: 5px;
-    font-size: 37px;
+    font-size: 3rem;
     padding: 2% 2% 2% 2%;
     resize:none;
     width:84%;
     border: none;
-    color: green;
+    color: blue;
+    background: transparent;
 }
 
 textarea::placeholder{
-    color: rgb(7, 173, 7);
+    color: darkblue;
+    /* color: rgb(7, 173, 7); */
 }
 
 #mensaje{
-    height: 75%;
+    height: 60%;
     margin:20px 20px 20px 6%;
 }
 
 #texto{
-    height: 65%;
+    height: 55%;
     margin:20px 20px 20px 6%;
 }
+
+.alerta{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alerta.activate{
+    animation:alertAnimation .7s infinite;
+}
+
+.alert-svg{
+    width: 30px;
+    display: inline;
+    margin-left: 10%;
+    /* transform: translateX(-70%);  */
+}
+.alert-svg > path{
+    fill:gray;
+}
+.alert-text{
+    font-size: 2rem;
+    color: #495057;
+}
+.alerta.activate >.alert-svg >path{
+    animation:svgAnimation .7s infinite;
+}
+/* .img-alert{
+    margin-left:50%;
+    transform: translateX(-50%);    
+}
+
+#img-alert2{
+    display: none;
+} */
 
 #alura-img{
     width: 84%;
     margin:7% 7% 7% 6%;
-    display:none;
+}
+#img-no-mensaje{
+    display: none;
+    width: 84%;
+    margin:7% 7% 7% 6%;
 }
 
 button{
     display:inline-block;
-    /* position:relative; */    
     font-weight: bold;
     border-radius: 7px;
     border:3px solid;
     border-color: #161F5F;
     background: none;
-    margin: 10px;
+    margin: 10px auto 10px 3%;
     width: 155px;
     height: 50px;
     font-size: 20px;
-    /* color: green; */
     color: blue;
+}
+
+.button-mensaje{
+    display:none;
 }
 
 button:hover{
@@ -102,7 +143,6 @@ button:active {
     width: 150px;
     height: 45px;
     box-shadow: 3px 2px 22px 1px red;
-    /* transition: 0s; */
 }
 
 footer{
@@ -129,12 +169,10 @@ li{
 }
 
 .redes-S:hover{
-    /* margin: 5px; */
     background-color: blue;
     box-shadow: 0 0 15px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;    
 }
 .redes-S:active {
-    /* transform: scale(0.98); */
     width: 45px;
     height: 45px;
     box-shadow: 3px 2px 22px 3px red;
@@ -158,8 +196,9 @@ li{
     
     .zona-texto{
         width: 90%;
-        height: 500px;
+        height: 30%; /*500px */
         margin:5%;
+        text-align: center;
         /* display: block; */
         /* margin:30px; */
         border-radius: 10px;
@@ -169,7 +208,7 @@ li{
     .zona-mensaje{
         position:static;
         width: 90%;
-        height: 620px;
+        height: 30%; /* 620px */
         background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red;
         border: 2px solid red;
         border-radius:10px;
@@ -178,19 +217,27 @@ li{
         left:5%;
     }
 
-    
-    
-    /* textarea{
-        display: inline-block;
-        border-radius: 5px;
-        font-size: 37px;
-        padding: 2% 2% 2% 2%;
-        resize:none;
-        margin:7% 7% 7% 6%;
-        width:84%;
-        height: 200px;
-        border: none;
+    textarea{
+        height: 30%;
+        margin:20px 20px 20px 6%;
+        font-size: 2rem;  
+    }
+
+    .img-alert{
+        width: 75%;
+    }
+ 
+    /* #texto{
+        height: 30%;
+        margin:20px 20px 20px 6%;
+        font-size: 2rem;
     } */
+ 
+    button{
+        display: block;
+        margin-left:50%;
+        transform: translateX(-50%);
+    }    
 }
 
 @keyframes boton-color {
@@ -201,5 +248,23 @@ li{
     90%{
         background: none;
         color: blue;
+    }
+}
+
+@keyframes svgAnimation {
+    from{        
+        fill:red;
+    }
+    to{
+        fill:gray;
+    }
+}
+
+@keyframes alertAnimation {
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1);
     }
 }
