@@ -19,16 +19,38 @@ body{
 }
 
 main{
+    /* display: flex;
+    flex-wrap: wrap; */
     margin:25px;
 }
 
+.borde-animado,rect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill:transparent;
+    z-index: -1;
+}
+rect{
+    stroke:#161F5F;
+    stroke-width: 7;
+    stroke-dasharray: 100;
+    animation:borderAnimation 4s linear infinite;
+}
+
+.zona-encriptacion{
+    border-radius:10px;
+    border: 2px solid blue;
+}
+
 .zona-texto{
+    position: relative;
     width: 55%;
-    height: 450px;
+    height: 475px;
     display: inline-block;
     margin:30px;
-    border-radius: 10px;
-    border:2px solid red;
 }
 
 .zona-mensaje{
@@ -36,11 +58,9 @@ main{
     width: 370px;
     height: 620px;
     /* background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red; */
-    border: 2px solid red;
-    border-radius:10px;
     top: 50px;
     left:60%;
-    margin:20px 10% 0 0;
+    margin:20px;
 }
 
 textarea{
@@ -48,6 +68,7 @@ textarea{
     border-radius: 5px;
     font-size: 3rem;
     padding: 2% 2% 2% 2%;
+    margin:20px 20px 20px 6%;
     resize:none;
     width:84%;
     border: none;
@@ -55,94 +76,76 @@ textarea{
     background: transparent;
 }
 
-textarea::placeholder{
+#texto::placeholder{
     color: darkblue;
-    /* color: rgb(7, 173, 7); */
 }
 
 #mensaje{
     height: 60%;
-    margin:20px 20px 20px 6%;
 }
 
 #texto{
     height: 55%;
-    margin:20px 20px 20px 6%;
 }
 
 .alerta{
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.alerta.activate{
-    animation:alertAnimation .7s infinite;
+    margin:15px;
 }
 
 .alert-svg{
     width: 30px;
     display: inline;
-    margin-left: 10%;
-    /* transform: translateX(-70%);  */
+    margin-left: 7%;
 }
 .alert-svg > path{
     fill:gray;
 }
 .alert-text{
-    font-size: 2rem;
+    font-size: 30px;
     color: #495057;
 }
 .alerta.activate >.alert-svg >path{
-    animation:svgAnimation .7s infinite;
-}
-/* .img-alert{
-    margin-left:50%;
-    transform: translateX(-50%);    
+    animation:alertAnimation .5s 3;
 }
 
-#img-alert2{
-    display: none;
-} */
-
-#alura-img{
+.imagenes-mensaje{
     width: 84%;
     margin:7% 7% 7% 6%;
 }
+
 #img-no-mensaje{
     display: none;
-    width: 84%;
-    margin:7% 7% 7% 6%;
 }
 
 button{
-    display:inline-block;
     font-weight: bold;
     border-radius: 7px;
     border:3px solid;
     border-color: #161F5F;
     background: none;
     margin: 10px auto 10px 3%;
-    width: 155px;
+    width: 150px;   
     height: 50px;
     font-size: 20px;
     color: blue;
 }
 
-.button-mensaje{
-    display:none;
-}
-
 button:hover{
     animation-name:boton-color;
     animation-duration: 1.5s;
-    box-shadow: 0 0 10px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;
+    box-shadow: 0 0 10px darkblue, 0 0 20px darkblue, 0 0 40px darkblue;
 }
 
 button:active {
-    width: 150px;
-    height: 45px;
+    transform: scale(.9);
     box-shadow: 3px 2px 22px 1px red;
+}
+
+.button-mensaje{
+    display:none;
 }
 
 footer{
@@ -152,14 +155,16 @@ footer{
 }
 
 .redes{
+    position: relative;
     display: inline-block;
-    border:2px solid blue;
+    /* border:2px solid blue; */
     border-radius: 5px;
+    z-index: 1;
 }
 
 li{
     display: inline-block;
-    text-align: center;   
+    text-align: center;
 }
 
 .redes-S{    
@@ -173,8 +178,7 @@ li{
     box-shadow: 0 0 15px darkblue, 0 0 40px darkblue, 0 0 80px darkblue;    
 }
 .redes-S:active {
-    width: 45px;
-    height: 45px;
+    transform:scale(.9);
     box-shadow: 3px 2px 22px 3px red;
     transition: 0s;
 }
@@ -186,35 +190,33 @@ li{
     text-align: center;
     margin-top: 15px;
 }
-/* #161F5F */
 
-@media screen and (max-width:950px){
+@media screen and (max-width:1000px){
     h1{
         font-size: 3rem;
         padding: 50px 100px 0 12%;
     }
-    
-    .zona-texto{
-        width: 90%;
-        height: 30%; /*500px */
-        margin:5%;
-        text-align: center;
-        /* display: block; */
-        /* margin:30px; */
-        border-radius: 10px;
-        border:2px solid red;
+    .borde-animado,rect{
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
     
-    .zona-mensaje{
-        position:static;
+    .zona-encriptacion{
         width: 90%;
-        height: 30%; /* 620px */
-        background: linear-gradient(rgba(5, 7, 12, 0.97),rgba(5, 7, 12,0.97)),red;
-        border: 2px solid red;
-        border-radius:10px;
+        height: 30%;
         margin:5%;
-        top: 50px;
-        left:5%;
+    }
+
+    .zona-texto{
+        position:relative;
+        text-align: center;
+    }
+    
+    .zona-mensaje{        
+        left:0;
+        top: 0;
+        position:relative;/* static*/
     }
 
     textarea{
@@ -223,24 +225,25 @@ li{
         font-size: 2rem;  
     }
 
-    .img-alert{
-        width: 75%;
-    }
- 
-    /* #texto{
-        height: 30%;
-        margin:20px 20px 20px 6%;
-        font-size: 2rem;
-    } */
- 
     button{
         display: block;
-        margin-left:50%;
-        transform: translateX(-50%);
+        margin-left: auto;
     }    
+    button:active {
+        transform: scale(.9);
+    }
+    .alert-svg{
+        width: 30px;
+        display: block;
+        margin-left:7%;
+    }
+
+    .alert-text{
+        font-size: 1rem;
+    }
 }
 
-@keyframes boton-color {
+@keyframes boton-color{
     25%{
         background: blue;
         color: black;
@@ -251,7 +254,7 @@ li{
     }
 }
 
-@keyframes svgAnimation {
+@keyframes alertAnimation{
     from{        
         fill:red;
     }
@@ -260,11 +263,12 @@ li{
     }
 }
 
-@keyframes alertAnimation {
-    from{
-        transform: scale(1.1);
+@keyframes borderAnimation {
+    0%{
+        stroke-dashoffset:800;
+        stroke: blue;
     }
-    to{
-        transform: scale(1);
+    100%{
+        stroke-dashoffset: 0;
     }
 }

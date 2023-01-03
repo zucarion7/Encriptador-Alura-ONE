@@ -30,8 +30,8 @@ function validar(frase){
     }else if(validarLetras(frase)==false){
         animarAlert();
         setTimeout(()=>{
-            alerta.classList.remove("activate");},5000)
-
+            alerta.classList.remove("activate");
+        },1500)
     }else{
         validacion=true;
     }
@@ -61,7 +61,7 @@ function animarAlert(){
 
 function displayear(elemento,estilo){
     if(estilo==true){
-        elemento.style.display = "inline";
+        elemento.style.display = "block";
     }else{
         elemento.style.display = "none";
     }
@@ -79,6 +79,8 @@ function activarBotones(empty){
     displayear(imgAlura,!empty);
     displayear(limpiar_mensaje,empty);
     displayear(copiar,empty);
+    limpiar_mensaje.style.marginLeft = 'auto';
+    copiar.style.marginLeft = 'auto';
 }
 
 function vacioAlert(empty){
@@ -101,14 +103,13 @@ let mensaje=document.querySelector("[name=mensaje]");
 var copiar=document.querySelector("[name=copiar]");
 var limpiar_mensaje=document.querySelector("[name=limpiar_mensaje");
 var alerta=document.querySelector(".alerta");
-// var alert1=document.querySelector("#img-alert1");
-// var alert2=document.querySelector("#img-alert2");
 var imgAlura=document.querySelector("#alura-img");
 var img_no_mensaje=document.querySelector("#img-no-mensaje");
 
 encriptador.addEventListener("click",()=>{
     if(validar(texto.value)==true){
         mensaje.value=cambio(texto.value,listaDesEnc,listaEncrip);
+        document.querySelector(".zona-mensaje").focus;
         activarBotones(!mensajeEmpty());
     }
 });

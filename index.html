@@ -21,7 +21,7 @@
         </header>
         
         <main>
-            <div class="zona-texto">
+            <div class="zona-texto zona-encriptacion">
                 <textarea id="texto" name="texto" placeholder="Ingrese el texto aquí"></textarea>
                 <div class="alerta">
                     <svg class="alert-svg" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,10 +38,10 @@
                 <button type="button" name="limpiar_texto">Limpiar</button>
             </div>
 
-            <section class="zona-mensaje">
+            <section class="zona-mensaje zona-encriptacion">
                 <textarea id="mensaje" name="mensaje" readonly></textarea>
-                <img id="img-no-mensaje" src="img/no mensaje.png">
-                <img id="alura-img" src="img/Alura.png">
+                <img id="img-no-mensaje" class="imagenes-mensaje" src="img/no mensaje.png">
+                <img id="alura-img" class="imagenes-mensaje" src="img/Alura.png">
                 <button class="button-mensaje" type="button" name="copiar">Copiar</button>
                 <button class="button-mensaje" type="button" name="limpiar_mensaje">Limpiar</button>
             </section>
@@ -49,6 +49,7 @@
 
         <footer>
             <section class="redes">
+                <svg class="borde-animado"><rect></rect></svg>
                 <ul> 
                     <li>
                         <a href="https://github.com/zucarion7" target="_BLANK">
