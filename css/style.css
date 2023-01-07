@@ -69,6 +69,7 @@ textarea{
     font-size: 3rem;
     padding: 2% 2% 2% 2%;
     margin:20px 20px 20px 6%;
+    outline: none;
     resize:none;
     width:84%;
     border: none;
@@ -118,6 +119,10 @@ textarea{
 
 #img-no-mensaje{
     display: none;
+}
+
+#img-no-mensaje.activate{
+    animation:noTextAnimation .5s 3;
 }
 
 button{
@@ -256,10 +261,22 @@ li{
 
 @keyframes alertAnimation{
     from{        
-        fill:red;
+        fill:blue;
     }
     to{
         fill:gray;
+    }
+}
+
+@keyframes noTextAnimation {
+    25%{
+        transform: scale(1.1);
+    }
+    75%{
+        transform:scale(1.2);
+    }    
+    100%{
+        transform:scale(1.3);
     }
 }
 
