@@ -19,5 +19,5 @@ También se encontrará en el pie de página mi: <br>
 <a href="https://www.instagram.com/zucarion7/" target="_BLANK">Instagram</a> <br>
 <a href="https://github.com/zucarion7" target="_BLANK">GitHub</a> <br>
 
-sin más que agregar... a disfrutar.
+sin más que agregar... a disfrutar. <br>
 <a href="https://zucarion7.github.io/Encriptador-Alura-ONE/" target="_BLANK">Encriptador</a> <br>
